@@ -1,9 +1,12 @@
 'use client'
 
-import { Shield, FileCheck, Award, CheckCircle, Download, Eye } from 'lucide-react'
+import { useState } from 'react'
+import { Shield, FileCheck, Award, CheckCircle, Eye, X, ExternalLink } from 'lucide-react'
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from './MotionWrappers'
 
 export default function Legalitas() {
+  const [activeDocument, setActiveDocument] = useState(null)
+
   const legalDocuments = [
     {
       icon: Shield,
@@ -31,8 +34,8 @@ export default function Legalitas() {
     }
   ]
 
-  const handleViewDocument = (file) => {
-    window.open(file, '_blank')
+  const handleViewDocument = (document) => {
+    setActiveDocument(document)
   }
 
   return (
@@ -56,7 +59,7 @@ export default function Legalitas() {
         {/* Legal Documents Grid */}
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {legalDocuments.map((doc, index) => (
-            <StaggerItem key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-500 ease-out border border-gray-200 overflow-hidden flex flex-col h-full">
+            <StaggerItem key={index} className="bg-white rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ease-out border border-gray-200 overflow-hidden flex flex-col h-full">
               {/* Header */}
               <div className="p-6 border-b border-gray-100">
                 <div className="flex items-center mb-4">
@@ -89,8 +92,8 @@ export default function Legalitas() {
               {/* Actions */}
               <div className="p-4 bg-gray-50 mt-auto">
                 <button 
-                  onClick={() => handleViewDocument(doc.file)}
-                  className="w-full bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center min-h-[48px]"
+                  onClick={() => handleViewDocument(doc)}
+                  className="w-full bg-blue-500 hover:bg-blue-600 hover:shadow-lg text-white text-sm font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center min-h-[48px]"
                   aria-label={`Lihat dokumen ${doc.title}`}
                 >
                   <Eye className="w-4 h-4 mr-2" aria-hidden="true" />
@@ -111,6 +114,49 @@ export default function Legalitas() {
           </div>
         </AnimateOnScroll>
       </div>
+
+      {activeDocument && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 px-4 py-6"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Pratinjau dokumen ${activeDocument.title}`}
+        >
+          <div className="flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-lg bg-white shadow-2xl">
+            <div className="flex items-center justify-between border-b border-gray-200 px-4 py-3">
+              <div>
+                <h3 className="text-base font-semibold text-gray-900">{activeDocument.title}</h3>
+                <p className="text-xs text-gray-500">{activeDocument.description}</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href={activeDocument.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-blue-600"
+                  aria-label={`Buka ${activeDocument.title} di tab baru`}
+                >
+                  <ExternalLink className="h-5 w-5" aria-hidden="true" />
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setActiveDocument(null)}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+                  aria-label="Tutup pratinjau dokumen"
+                >
+                  <X className="h-5 w-5" aria-hidden="true" />
+                </button>
+              </div>
+            </div>
+            <iframe
+              src={activeDocument.file}
+              title={`Dokumen ${activeDocument.title}`}
+              className="h-[75vh] w-full bg-gray-100"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

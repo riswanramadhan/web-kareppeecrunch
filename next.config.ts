@@ -9,6 +9,22 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "kareppeecrunch.com" }],
+        destination: "https://kareppeecrunch.dekatlokal.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.kareppeecrunch.com" }],
+        destination: "https://kareppeecrunch.dekatlokal.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

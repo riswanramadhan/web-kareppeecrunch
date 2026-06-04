@@ -8,7 +8,12 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const SITE_URL = "https://kareppeecrunch.com";
+const SITE_URL = "https://kareppeecrunch.dekatlokal.com";
+const CANONICAL_URL = `${SITE_URL}/`;
+const SITE_TITLE =
+  "Kareppee Crunch - Kerupuk Singkong Premium Khas Makassar Gowa";
+const SITE_DESCRIPTION =
+  "Kareppee Crunch adalah kerupuk singkong premium khas Makassar Gowa dengan varian rasa renyah, halal, SPP-IRT, dan NIB. Cocok untuk camilan, oleh-oleh, dan peluang reseller.";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -18,26 +23,30 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(CANONICAL_URL),
   title: {
-    default: "Kareppee Crunch - Kerupuk Singkong Premium Khas Gowa Makassar",
+    default: SITE_TITLE,
     template: "%s | Kareppee Crunch",
   },
-  description:
-    "Kerupuk singkong premium khas Gowa Makassar dengan 6 varian rasa unik. Bersertifikat Halal MUI, SPP-IRT & NIB. Pesan sekarang untuk camilan renyah favorit Anda!",
+  description: SITE_DESCRIPTION,
   keywords: [
+    "Kareppee Crunch",
     "kerupuk singkong",
     "kerupuk singkong premium",
+    "krupuk singkong premium",
     "camilan khas Makassar",
     "oleh-oleh Gowa",
-    "Kareppee Crunch",
+    "oleh-oleh Makassar",
+    "kerupuk singkong khas Gowa",
     "kerupuk halal",
+    "kerupuk SPP-IRT",
     "camilan tradisional",
     "snack Indonesia",
     "kerupuk renyah",
     "camilan UMKM",
+    "reseller kerupuk singkong",
   ],
-  authors: [{ name: "Kareppee Crunch", url: SITE_URL }],
+  authors: [{ name: "Kareppee Crunch", url: CANONICAL_URL }],
   creator: "Kareppee Crunch",
   publisher: "Kareppee Crunch",
   robots: {
@@ -52,16 +61,15 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: SITE_URL,
+    canonical: CANONICAL_URL,
   },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: SITE_URL,
+    url: CANONICAL_URL,
     siteName: "Kareppee Crunch",
-    title: "Kareppee Crunch - Kerupuk Singkong Premium Khas Gowa Makassar",
-    description:
-      "Kerupuk singkong premium khas Gowa Makassar dengan 6 varian rasa unik. Bersertifikat Halal MUI, SPP-IRT & NIB. Pesan sekarang!",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: [
       {
         url: "/images/hero.jpeg",
@@ -73,13 +81,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kareppee Crunch - Kerupuk Singkong Premium Khas Gowa Makassar",
-    description:
-      "Kerupuk singkong premium khas Gowa Makassar dengan 6 varian rasa unik. Bersertifikat Halal MUI!",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: ["/images/hero.jpeg"],
   },
   icons: {
-    icon: { url: "/favicon.ico" },
+    icon: [
+      { url: "/images/logo.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: [{ url: "/images/logo.png", type: "image/png" }],
     apple: { url: "/images/logo.png" },
   },
   manifest: "/manifest.json",
@@ -96,10 +107,9 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Kareppee Crunch",
-  url: SITE_URL,
+  url: CANONICAL_URL,
   logo: `${SITE_URL}/images/logo.png`,
-  description:
-    "Produsen kerupuk singkong premium khas Gowa Makassar dengan kualitas modern dan cita rasa autentik.",
+  description: SITE_DESCRIPTION,
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+62882019886782",
@@ -118,7 +128,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "Kareppee Crunch",
   image: `${SITE_URL}/images/hero.jpeg`,
-  url: SITE_URL,
+  url: CANONICAL_URL,
   telephone: "+62882019886782",
   address: {
     "@type": "PostalAddress",
@@ -153,10 +163,11 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Kareppee Crunch",
-  url: SITE_URL,
+  alternateName: "Kareppee Crunch Kerupuk Singkong Premium Khas Makassar Gowa",
+  url: CANONICAL_URL,
   potentialAction: {
     "@type": "SearchAction",
-    target: `${SITE_URL}/?q={search_term_string}`,
+    target: `${CANONICAL_URL}?q={search_term_string}`,
     "query-input": "required name=search_term_string",
   },
 };
@@ -169,7 +180,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Beranda",
-      item: SITE_URL,
+      item: CANONICAL_URL,
     },
   ],
 };

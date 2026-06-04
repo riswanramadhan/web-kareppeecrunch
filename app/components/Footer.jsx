@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin, Clock, Heart } from 'lucide-react'
 
 const Footer = () => {
   const handleSmoothScroll = (e, href) => {
@@ -14,37 +13,6 @@ const Footer = () => {
       })
     }
   }
-  const companyLinks = [
-    { name: 'Tentang Kami', href: '#about' },
-    { name: 'Visi & Misi', href: '#about' },
-    { name: 'Karir', href: '#' },
-    { name: 'Blog', href: '#' }
-  ]
-
-  const productLinks = [
-    { name: 'Semua Produk', href: '#products' },
-    { name: 'Kareppee Original', href: '#products' },
-    { name: 'Kareppee Pedas', href: '#products' },
-    { name: 'Kareppee Keju', href: '#products' },
-    { name: 'Kareppee BBQ', href: '#products' }
-  ]
-
-  const supportLinks = [
-    { name: 'Pusat Bantuan', href: '#pusat-bantuan' },
-    { name: 'Cara Pemesanan', href: '#alur-pemesanan' },
-    { name: 'Pengiriman', href: '#pusat-bantuan' },
-    { name: 'Pembayaran', href: '#pusat-bantuan' },
-    { name: 'Kebijakan Retur', href: '#pusat-bantuan' },
-    { name: 'Syarat & Ketentuan', href: '#' }
-  ]
-
-  const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Youtube, href: '#', label: 'YouTube' }
-  ]
-
   return (
     <footer id="contact" className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white" role="contentinfo" aria-label="Footer Kareppee Crunch">
       {/* Main Footer */}
@@ -136,7 +104,15 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 pt-8 text-center">
           <p className="text-gray-400 text-xs">
-            &copy;2026 Kareppee Crunch. All rights reserved | Powered by DekatLokal
+            &copy;2026 Kareppee Crunch. All rights reserved | Powered by{' '}
+            <a
+              href="https://dekatlokal.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-orange-300 hover:text-orange-200"
+            >
+              DekatLokal
+            </a>
           </p>
         </div>
       </div>

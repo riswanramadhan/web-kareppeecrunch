@@ -99,7 +99,7 @@ export default function Reviews() {
 
                 {/* Review Text */}
                 <p className="text-gray-700 text-sm leading-relaxed flex-1 italic">
-                  "{review.review}"
+                  &ldquo;{review.review}&rdquo;
                 </p>
 
                 {/* Bottom Accent */}
