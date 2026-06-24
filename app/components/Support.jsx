@@ -40,6 +40,7 @@ const Support = () => {
                       height={96}
                       className="max-h-full w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 ease-out"
                       loading="lazy"
+                      sizes="200px"
                     />
                   </div>
                 </div>

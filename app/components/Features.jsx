@@ -1,6 +1,6 @@
 'use client'
 
-import { Leaf, Award, Clock, Truck, Users, CheckCircle, Sparkles, HandHeart, FileCheck, Globe } from 'lucide-react'
+import { Leaf, Award, Sparkles, HandHeart, FileCheck, Globe } from 'lucide-react'
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from './MotionWrappers'
 
 export default function Features() {
@@ -31,8 +31,8 @@ export default function Features() {
     },
     {
       icon: FileCheck,
-      title: 'Legalitas Lengkap & Terpercaya',
-      description: 'Menjamin keamanan konsumsi dengan izin edar resmi: NIB, Sertifikat SPP-IRT dan Sertifikat Halal Indonesia.',
+      title: 'Dokumen Legalitas Tersedia',
+      description: 'Dokumen NIB, Sertifikat SPP-IRT, dan Sertifikat Halal Indonesia tersedia pada halaman ini untuk ditinjau pelanggan.',
       color: 'bg-red-500'
     },
     {

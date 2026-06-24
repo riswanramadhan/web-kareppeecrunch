@@ -16,8 +16,9 @@ export default function CTA() {
   }
 
   const handleContactMinka = () => {
-    const whatsappUrl = 'https://wa.me/62882019886782'
-    window.open(whatsappUrl, '_blank')
+    const message = 'Halo Kak, saya dapat info dari website DekatLokal Kareppee Crunch. Saya ingin bertanya tentang produk dan pemesanan.'
+    const whatsappUrl = `https://wa.me/62882019886782?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 
   const marketplaceLinks = [
@@ -28,7 +29,7 @@ export default function CTA() {
     },
     {
       name: 'Tokopedia',
-      url: 'https://www.tokopedia.com/kareppee-crunch-store',
+      url: 'https://www.tokopedia.com/search?st=product&q=kareppee%20crunch',
       color: 'bg-green-500 hover:bg-green-600'
     },
     {
@@ -52,7 +53,7 @@ export default function CTA() {
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.1}>
           <p className="text-base md:text-lg text-orange-100 mb-6 md:mb-8 max-w-xl md:max-w-2xl mx-auto">
-            Kerupuk singkong renyah dengan berbagai varian rasa. Dijamin bikin nagih!
+            Kerupuk singkong renyah dengan berbagai varian rasa modern yang wajib dicoba.
           </p>
         </AnimateOnScroll>
 

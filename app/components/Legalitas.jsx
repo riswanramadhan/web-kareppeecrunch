@@ -11,10 +11,10 @@ export default function Legalitas() {
     {
       icon: Shield,
       title: 'Sertifikat Halal',
-      description: 'Sertifikasi halal resmi dari MUI',
+      description: 'Dokumen Sertifikat Halal Indonesia',
       file: '/legalitas/sertifikathalal.pdf',
       color: 'bg-green-500',
-      preview: 'Dokumen sertifikat halal yang menjamin produk Kareppee Crunch sesuai syariat Islam'
+      preview: 'Dokumen Sertifikat Halal Indonesia untuk produk Kareppee Crunch yang tersedia untuk ditinjau'
     },
     {
       icon: FileCheck,
@@ -52,7 +52,7 @@ export default function Legalitas() {
           </h2>
           
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            Dokumen resmi yang menjamin kualitas dan keamanan produk kami
+            Dokumen legalitas Kareppee Crunch yang tersedia untuk ditinjau pelanggan
           </p>
         </AnimateOnScroll>
 
@@ -109,7 +109,7 @@ export default function Legalitas() {
           <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2">
             <CheckCircle className="w-4 h-4 text-green-600" aria-hidden="true" />
             <span className="text-green-800 font-medium text-sm">
-              100% Legal dan Terpercaya
+              Dokumen Legalitas Tersedia
             </span>
           </div>
         </AnimateOnScroll>

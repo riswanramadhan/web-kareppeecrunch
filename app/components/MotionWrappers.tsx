@@ -123,11 +123,13 @@ interface StaggerItemProps {
   children: ReactNode
   className?: string
   enableHover?: boolean
+  id?: string
 }
 
-export function StaggerItem({ children, className = '', enableHover = true }: StaggerItemProps) {
+export function StaggerItem({ children, className = '', enableHover = true, id }: StaggerItemProps) {
   return (
-    <motion.div 
+    <motion.div
+      id={id}
       variants={fadeUp} 
       className={className}
       whileHover={enableHover ? { 

@@ -1,37 +1,15 @@
 'use client'
 
-import { Users, TrendingUp, Shield, Zap, Package, CheckCircle, Phone, Star, ArrowRight, MessageCircle } from 'lucide-react'
+import { Users, TrendingUp, Shield, Zap, Package, CheckCircle, Star, MessageCircle } from 'lucide-react'
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from './MotionWrappers'
+import { resellerPackages as packages } from '../data/site-content'
 
 export default function PeluangKemitraan() {
   const handleWhatsAppOrder = (packageName) => {
-    const message = `Halo Minka, saya tertarik bergabung menjadi Reseller Kareppee Crunch Paket ${packageName}. Mohon info selanjutnya.`
+    const message = `Halo Kak, saya dapat info dari website DekatLokal Kareppee Crunch. Saya tertarik dengan peluang reseller Kareppee Crunch Paket ${packageName}.`
     const whatsappUrl = `https://wa.me/62882019886782?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, '_blank')
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
-  const packages = [
-    {
-      name: 'Paket Ekonomi',
-      price: 'Rp 200rb',
-      items: '20 pcs',
-      description: 'Cocok untuk memulai perjalanan bisnis Anda',
-      popular: false
-    },
-    {
-      name: 'Paket Standar',
-      price: 'Rp 470rb',
-      items: '50 pcs',
-      description: 'Pilihan favorit para reseller kami',
-      popular: true
-    },
-    {
-      name: 'Paket Pro',
-      price: 'Rp 4jt',
-      items: '500 pcs',
-      description: 'Investasi cerdas untuk profit maksimal',
-      popular: false
-    }
-  ]
 
   const benefits = [
     {
@@ -148,9 +126,10 @@ export default function PeluangKemitraan() {
                   </p>
                   <button 
                     onClick={() => handleWhatsAppOrder(pkg.name.replace('Paket ', ''))}
+                    aria-label={`Pesan ${pkg.name} reseller Kareppee Crunch melalui WhatsApp`}
                     className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center"
                   >
-                    <MessageCircle className="w-4 h-4 mr-2" />
+                    <MessageCircle className="w-4 h-4 mr-2" aria-hidden="true" />
                     Pesan Paket Ini
                   </button>
                 </div>

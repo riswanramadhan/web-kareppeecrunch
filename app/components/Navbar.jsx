@@ -39,26 +39,25 @@ export default function Navbar() {
           <a
             href="#home"
             onClick={(e) => handleSmoothScroll(e, '#home')}
-            aria-label="Kareppeee Crunch - Kembali ke beranda"
+            aria-label="Kareppee Crunch - Kembali ke beranda"
             className="flex items-center"
           >
             <Image
               src="/images/logo.png"
-              alt="Kareppeee Crunch"
+              alt="Logo Kareppee Crunch kerupuk singkong premium khas Gowa Makassar"
               width={120}
               height={32}
               className="h-8 w-auto"
-              priority
+              sizes="120px"
             />
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8 text-sm" role="menubar">
+          <div className="hidden md:flex items-center gap-8 text-sm">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                role="menuitem"
                 aria-label={`Navigasi ke ${item.name}`}
                 className="text-white/90 hover:text-white transition-colors duration-200 min-h-[48px] flex items-center"
                 onClick={(e) => handleSmoothScroll(e, item.href)}
@@ -69,8 +68,7 @@ export default function Navbar() {
             {/* Buy Button */}
             <a
               href="#cta"
-              role="menuitem"
-              aria-label="Beli produk Kareppeee Crunch"
+              aria-label="Beli produk Kareppee Crunch"
               className="flex items-center gap-2 border border-white/60 py-2 px-4 rounded-full text-sm min-h-[48px]"
               onClick={(e) => handleSmoothScroll(e, '#cta')}
             >
@@ -96,7 +94,6 @@ export default function Navbar() {
       {isOpen && (
         <div
           id="mobile-menu"
-          role="menu"
           aria-label="Menu navigasi mobile"
           className="md:hidden bg-black/80 backdrop-blur-md text-white"
         >
@@ -105,7 +102,6 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                role="menuitem"
                 aria-label={`Navigasi ke ${item.name}`}
                 className="block opacity-80 hover:opacity-100 min-h-[48px] flex items-center"
                 onClick={(e) => handleSmoothScroll(e, item.href)}
@@ -116,8 +112,7 @@ export default function Navbar() {
 
             <a
               href="#cta"
-              role="menuitem"
-              aria-label="Beli produk Kareppeee Crunch"
+              aria-label="Beli produk Kareppee Crunch"
               className="mt-4 w-full flex items-center justify-center gap-2 border border-white/60 py-2 px-4 rounded-full text-sm min-h-[48px]"
               onClick={(e) => handleSmoothScroll(e, '#cta')}
             >

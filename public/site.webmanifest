@@ -1,23 +1,25 @@
 {
+  "id": "/",
   "name": "Kareppee Crunch",
   "short_name": "Kareppee",
-  "description": "Kerupuk singkong premium khas Makassar Gowa dengan varian rasa renyah, halal, SPP-IRT, dan NIB.",
+  "description": "Kerupuk singkong premium khas Gowa Makassar dengan tekstur renyah, ringan, dan varian rasa modern.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ea580c",
   "orientation": "portrait-primary",
-  "lang": "id",
+  "lang": "id-ID",
   "categories": ["food", "shopping"],
   "icons": [
     {
-      "src": "/images/logo.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/logo.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

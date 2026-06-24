@@ -3,63 +3,13 @@
 import Image from 'next/image'
 import { MessageCircle } from 'lucide-react'
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from './MotionWrappers'
+import { products } from '../data/site-content'
 
 export default function Products() {
-  const products = [
-    {
-      id: 1,
-      name: 'Original',
-      description: 'Rasa klasik autentik dengan gurih alami singkong',
-      price: 'Rp 15.000',
-      image: '/images/varian/original.jpg',
-      badge: 'Best Seller'
-    },
-    {
-      id: 2,
-      name: 'Hotlado',
-      description: 'Perpaduan pedas dan gurih yang menggugah selera',
-      price: 'Rp 16.000',
-      image: '/images/varian/hotlado.jpg',
-      badge: 'Hot'
-    },
-    {
-      id: 3,
-      name: 'Jagung Bakar',
-      description: 'Rasa manis gurih jagung bakar yang khas',
-      price: 'Rp 17.000',
-      image: '/images/varian/jagungbakar.jpg',
-      badge: 'New'
-    },
-    {
-      id: 4,
-      name: 'Pedas Daun Jeruk',
-      description: 'Pedas segar dengan aroma daun jeruk yang unik',
-      price: 'Rp 18.000',
-      image: '/images/varian/pedasdaunjeruk.jpg',
-      badge: 'Limited'
-    },
-    {
-      id: 5,
-      name: 'Green Matcha',
-      description: 'Perpaduan matcha premium dengan singkong renyah',
-      price: 'Rp 19.000',
-      image: '/images/varian/greenmatcha.jpg',
-      badge: 'Premium'
-    },
-    {
-      id: 6,
-      name: 'Cokelat',
-      description: 'Manis cokelat premium yang melengkapi rasa',
-      price: 'Rp 18.500',
-      image: '/images/varian/cokelat.jpg',
-      badge: 'Sweet'
-    }
-  ]
-
   const handleOrder = (productName) => {
-    const message = `Hai Minka, saya ingin memesan varian ${productName}`
+    const message = `Halo Kak, saya dapat info dari website DekatLokal Kareppee Crunch. Saya ingin pesan kerupuk singkong varian ${productName}.`
     const whatsappUrl = `https://wa.me/62882019886782?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, '_blank')
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -76,7 +26,11 @@ export default function Products() {
 
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
           {products.map((product) => (
-            <StaggerItem key={product.id} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-500 ease-out h-full flex flex-col">
+            <StaggerItem
+              key={product.id}
+              id={`produk-${product.slug}`}
+              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-500 ease-out h-full flex flex-col scroll-mt-20"
+            >
               {/* Badge */}
               {product.badge && (
                 <div className="absolute top-4 right-4 z-10">
@@ -101,6 +55,8 @@ export default function Products() {
                   width={400}
                   height={400}
                   loading="lazy"
+                  quality={80}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>

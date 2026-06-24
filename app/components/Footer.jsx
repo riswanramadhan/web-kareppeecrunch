@@ -23,11 +23,12 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4 md:mb-6">
               <Image 
                 src="/images/logo.png" 
-                alt="Logo Kareppee Crunch kerupuk singkong premium"
+                alt="Logo Kareppee Crunch kerupuk singkong premium khas Gowa Makassar"
                 width={128}
                 height={64}
                 className="h-12 md:h-16 w-auto"
                 loading="lazy"
+                sizes="128px"
               />
             </div>
             
@@ -62,7 +63,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold text-white mb-4">Tautan Cepat</h4>
+            <h2 className="font-bold text-white mb-4">Tautan Cepat</h2>
             <ul className="space-y-3">
               <li><a className="text-gray-300 text-sm hover:text-orange-400 transition-colors" href="#home" onClick={(e) => handleSmoothScroll(e, '#home')}>Beranda</a></li>
               <li><a className="text-gray-300 text-sm hover:text-orange-400 transition-colors" href="#products" onClick={(e) => handleSmoothScroll(e, '#products')}>Katalog</a></li>
@@ -72,7 +73,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold text-white mb-4">Bantuan</h4>
+            <h2 className="font-bold text-white mb-4">Bantuan</h2>
             <ul className="space-y-3">
               <li><a className="text-gray-300 text-sm hover:text-orange-400 transition-colors" href="#pusat-bantuan" onClick={(e) => handleSmoothScroll(e, '#pusat-bantuan')}>FAQ</a></li>
               <li><a className="text-gray-300 text-sm hover:text-orange-400 transition-colors" href="#cta" onClick={(e) => handleSmoothScroll(e, '#cta')}>Hubungi Kami</a></li>
@@ -81,22 +82,22 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold text-white mb-4">Mitra Kami</h4>
+            <h2 className="font-bold text-white mb-4">Mitra Kami</h2>
             <p className="text-gray-300 text-sm mb-4">Didukung oleh mitra terpercaya kami.</p>
             <div className="flex flex-col items-start gap-4">
               {/* Mitra 1 */}
               <div className="flex items-start justify-start w-32 h-16 relative">
-                <Image src="/images/dekat-lokal.png" alt="Logo mitra DekatLokal - Platform UMKM Lokal" width={128} height={64} className="max-h-full max-w-full object-contain" loading="lazy" />
+                <Image src="/images/dekat-lokal.png" alt="Logo mitra DekatLokal untuk Kareppee Crunch" width={128} height={64} className="max-h-full max-w-full object-contain" loading="lazy" sizes="128px" />
               </div>
 
               {/* Mitra 2 */}
               <div className="flex items-start justify-start w-32 h-16 relative">
-                <Image src="/images/rumah-bumn.png" alt="Logo mitra Rumah BUMN Makassar" width={128} height={64} className="max-h-full max-w-full object-contain" loading="lazy" />
+                <Image src="/images/rumah-bumn.png" alt="Logo Rumah BUMN Makassar pendukung Kareppee Crunch" width={128} height={64} className="max-h-full max-w-full object-contain" loading="lazy" sizes="128px" />
               </div>
 
               {/* Mitra 3 */}
               <div className="flex items-start justify-start w-32 h-16 relative">
-                <Image src="/images/bank-bri.png" alt="Logo mitra Bank BRI" width={128} height={64} className="max-h-full max-w-full object-contain" loading="lazy" />
+                <Image src="/images/bank-bri.png" alt="Logo BRI mitra pendukung Kareppee Crunch" width={128} height={64} className="max-h-full max-w-full object-contain" loading="lazy" sizes="128px" />
               </div>
             </div>
           </div>
@@ -106,7 +107,7 @@ const Footer = () => {
           <p className="text-gray-400 text-xs">
             &copy;2026 Kareppee Crunch. All rights reserved | Powered by{' '}
             <a
-              href="https://dekatlokal.com"
+              href="https://dekatlokal.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-orange-300 hover:text-orange-200"

@@ -1,34 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react'
-import { AnimateOnScroll, StaggerContainer, StaggerItem } from './MotionWrappers'
+import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react'
+import { AnimateOnScroll } from './MotionWrappers'
+import { faqs } from '../data/site-content'
 
 export default function PusatBantuan() {
   const [openIndex, setOpenIndex] = useState(null)
-
-  const faqs = [
-    {
-      question: 'Apa itu Kareppee Crunch?',
-      answer: 'Kareppee Crunch adalah merek kerupuk singkong premium yang dibuat dari singkong pilihan berkualitas tinggi dengan proses produksi yang higienis. Produk kami menggunakan resep terbaik dengan cita rasa autentik Indonesia. Kami telah memiliki kelengkapan dokumen legalitas lengkap termasuk Sertifikat Halal MUI, Perizinan Berusaha Berbasis Risiko, dan SPP-IRT untuk menjamin keamanan dan kualitas produk yang Anda konsumsi.'
-    },
-    {
-      question: 'Bagaimana cara memesan produk Kareppee Crunch?',
-      answer: 'Anda dapat memesan melalui website kami, WhatsApp, atau marketplace favorit Anda. Cukup pilih varian yang diinginkan, tambahkan ke keranjang, lalu ikuti proses pembayaran. Kami juga melayani pemesanan dalam jumlah besar untuk acara atau reseller.'
-    },
-    {
-      question: 'Bagaimana cara pengiriman produk?',
-      answer: 'Kami melayani pengiriman ke seluruh Indonesia dengan berbagai pilihan ekspedisi terpercaya. Waktu pengiriman bervariasi tergantung lokasi tujuan. Untuk informasi lebih lanjut, silakan hubungi customer service kami.'
-    },
-    {
-      question: 'Apakah produk Kareppeee Crunch aman dikonsumsi?',
-      answer: 'Ya, produk kami 100% aman dikonsumsi. Kami telah memiliki sertifikat HALAL dari MUI, menggunakan bahan alami tanpa pengawet berbahaya, dan diproduksi dengan standar keamanan pangan yang ketat.'
-    },
-    {
-      question: 'Bagaimana jika ada masalah dengan pesanan?',
-      answer: 'Jika Anda mengalami masalah dengan pesanan, jangan ragu untuk menghubungi kami. Tim customer service siap membantu menyelesaikan setiap keluhan dengan solusi terbaik untuk kepuasan Anda.'
-    }
-  ]
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -81,13 +59,15 @@ export default function PusatBantuan() {
                     </div>
                   </button>
                   
-                  {openIndex === index && (
-                    <div id={`faq-answer-${index}`} className="px-6 py-4 bg-white border-t border-orange-100">
-                      <p className="text-gray-700 leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  )}
+                  <div
+                    id={`faq-answer-${index}`}
+                    hidden={openIndex !== index}
+                    className="px-6 py-4 bg-white border-t border-orange-100"
+                  >
+                    <p className="text-gray-700 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

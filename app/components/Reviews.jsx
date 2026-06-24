@@ -66,7 +66,7 @@ export default function Reviews() {
 
         {/* Reviews Grid */}
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {reviews.map((review, index) => (
+          {reviews.map((review) => (
             <StaggerItem key={review.id} className="group relative">
               {/* Card */}
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-orange-100 hover:border-orange-300 h-full flex flex-col relative overflow-hidden">
@@ -81,7 +81,7 @@ export default function Reviews() {
                     {review.avatar}
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-lg">{review.name}</h4>
+                    <h3 className="font-bold text-gray-900 text-lg">{review.name}</h3>
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className={`w-3 h-3 ${i < review.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
@@ -107,7 +107,7 @@ export default function Reviews() {
                   <div className="flex items-center justify-center">
                     <div className="flex items-center text-orange-500">
                       <Heart className="w-4 h-4 fill-current mr-1" />
-                      <span className="text-xs font-medium">Verified Purchase</span>
+                      <span className="text-xs font-medium">Testimoni pelanggan</span>
                     </div>
                   </div>
                 </div>
@@ -133,16 +133,16 @@ export default function Reviews() {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="group">
-                  <div className="text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-500 ease-out">Semua</div>
-                  <div className="text-orange-100">Pelanggan Puas</div>
+                  <div className="text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-500 ease-out">4</div>
+                  <div className="text-orange-100">Testimoni Pelanggan</div>
                 </div>
                 <div className="group">
                   <div className="text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-500 ease-out">5.0</div>
                   <div className="text-orange-100">Rating Rata-rata</div>
                 </div>
                 <div className="group">
-                  <div className="text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-500 ease-out">98%</div>
-                  <div className="text-orange-100">Repeat Order</div>
+                  <div className="text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-500 ease-out">6</div>
+                  <div className="text-orange-100">Varian Rasa</div>
                 </div>
               </div>
             </div>

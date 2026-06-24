@@ -108,7 +108,7 @@ export default function Story() {
                       <info.icon className="w-6 h-6 text-white" aria-hidden="true" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 mb-2">{info.title}</h4>
+                      <h3 className="font-semibold text-gray-900 mb-2">{info.title}</h3>
                       <p className="text-gray-600 leading-relaxed">{info.value}</p>
                     </div>
                   </div>
