@@ -50,7 +50,7 @@ export default function ProdukLayanan() {
   ]
 
   return (
-    <section id="produk-layanan" className="py-20 bg-gradient-to-br from-gray-50 via-white to-orange-50" aria-label="Produk dan layanan Kareppee Crunch">
+    <section id="produk-layanan" className="py-20 bg-gradient-to-br from-gray-50 via-white to-orange-50" aria-label="Produk dan layanan Kareppe Crunch">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimateOnScroll className="text-center mb-16">
@@ -63,7 +63,7 @@ export default function ProdukLayanan() {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Produk utama dan layanan unggulan dari Kareppee Crunch
+            Produk utama dan layanan unggulan dari Kareppe Crunch
           </p>
         </AnimateOnScroll>
 
@@ -113,13 +113,13 @@ export default function ProdukLayanan() {
               Tertarik dengan Produk dan Layanan Kami?
             </h3>
             <p className="text-orange-100 mb-8 max-w-2xl mx-auto">
-              Jelajahi berbagai pilihan produk dan layanan terbaik dari Kareppee Crunch untuk memenuhi kebutuhan Anda
+              Jelajahi berbagai pilihan produk dan layanan terbaik dari Kareppe Crunch untuk memenuhi kebutuhan Anda
             </p>
             <button 
               onClick={(e) => {
                 handleSmoothScroll(e, '#products')
               }}
-              aria-label="Lihat semua produk Kareppee Crunch"
+              aria-label="Lihat semua produk Kareppe Crunch"
               className="bg-white text-orange-700 hover:bg-orange-50 font-bold py-4 px-8 rounded-xl transition-all duration-500 ease-out transform hover:scale-105 inline-flex items-center min-h-[48px]"
             >
               <Package className="w-5 h-5 mr-2" aria-hidden="true" />

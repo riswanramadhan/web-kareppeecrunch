@@ -6,13 +6,13 @@ import { AnimateOnScroll, StaggerContainer, StaggerItem } from './MotionWrappers
 
 const Support = () => {
   const partners = [
-    { name: 'DekatLokal', logo: '/images/dekat-lokal.png', description: 'Platform UMKM Lokal' },
-    { name: 'Rumah BUMN Makassar', logo: '/images/rumah-bumn.png', description: 'Inkubator Bisnis BUMN' },
-    { name: 'Bank BRI', logo: '/images/bank-bri.png', description: 'Mitra Perbankan' }
+    { name: 'DekatLokal', logo: '/images/dekat-lokal.webp', description: 'Platform UMKM Lokal' },
+    { name: 'Rumah BUMN Makassar', logo: '/images/rumah-bumn.webp', description: 'Inkubator Bisnis BUMN' },
+    { name: 'Bank BRI', logo: '/images/bank-bri.webp', description: 'Mitra Perbankan' }
   ]
 
   return (
-    <section id="support" aria-label="Mitra pendukung Kareppee Crunch" className="py-16 bg-gradient-to-br from-orange-50 via-white to-orange-50">
+    <section id="support" aria-label="Mitra pendukung Kareppe Crunch" className="py-16 bg-gradient-to-br from-orange-50 via-white to-orange-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6" aria-hidden="true">
@@ -22,7 +22,7 @@ const Support = () => {
             Didukung Oleh <span className="text-orange-600">Mitra Terpercaya</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Kareppee Crunch didukung oleh mitra-mitra terpercaya untuk memberikan layanan terbaik
+            Kareppe Crunch didukung oleh mitra-mitra terpercaya untuk memberikan layanan terbaik
             dan mendukung pertumbuhan UMKM di Indonesia
           </p>
         </AnimateOnScroll>

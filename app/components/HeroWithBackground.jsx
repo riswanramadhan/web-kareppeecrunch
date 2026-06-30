@@ -6,13 +6,13 @@ import Image from 'next/image'
 export default function HeroWithBackground({ backgroundImage = null }) {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image - Potato Field */}
+      {/* Background Image - Cassava Field */}
       <div className="absolute inset-0">
         <div className="w-full h-full relative">
           {backgroundImage ? (
             <Image
               src={backgroundImage}
-              alt="Ladang singkong untuk bahan baku Kareppee Crunch"
+              alt="Ladang singkong untuk bahan baku Kareppe Crunch"
               fill
               sizes="100vw"
               unoptimized
@@ -39,7 +39,7 @@ export default function HeroWithBackground({ backgroundImage = null }) {
                   <span className="text-orange-700 font-bold text-2xl">KC</span>
                 </div>
                 <div>
-                  <h1 className="text-4xl font-bold text-white">Kareppee Crunch</h1>
+                  <h1 className="text-4xl font-bold text-white">Kareppe Crunch</h1>
                   <p className="text-orange-100 text-sm">Made with Love from Indonesia</p>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function HeroWithBackground({ backgroundImage = null }) {
                           <div className="w-20 h-20 bg-orange-500 rounded-full mx-auto mb-2 flex items-center justify-center">
                             <ChefHat className="w-10 h-10 text-white" />
                           </div>
-                          <p className="text-orange-700 font-bold text-sm">Kareppee</p>
+                          <p className="text-orange-700 font-bold text-sm">Kareppe</p>
                           <p className="text-orange-600 text-xs">Crunch</p>
                         </div>
                       </div>
@@ -118,7 +118,7 @@ export default function HeroWithBackground({ backgroundImage = null }) {
                   </div>
                 </div>
 
-                {/* Loose Potatoes */}
+                {/* Loose Cassava */}
                 <div className="absolute top-20 left-10 z-10">
                   <div className="bg-orange-600 rounded-full w-12 h-12 shadow-lg"></div>
                 </div>

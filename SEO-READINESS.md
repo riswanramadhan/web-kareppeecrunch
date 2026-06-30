@@ -1,79 +1,67 @@
-# Laporan SEO Readiness Kareppee Crunch
+# Laporan SEO Readiness Kareppe Crunch
 
-Tanggal audit dan implementasi: 24 Juni 2026  
-URL production: https://kareppeecrunch.dekatlokal.com/
+Tanggal audit dan implementasi: 30 Juni 2026  
+URL production: https://kareppecrunch.dekatlokal.com/
 
-## Ringkasan kondisi awal
+## Ringkasan Implementasi
 
-- Homepage production, `robots.txt`, `sitemap.xml`, dan `favicon.ico` sudah merespons HTTP 200.
-- Canonical dan domain production sudah tersedia, tetapi metadata sosial memakai gambar portrait dengan deklarasi dimensi 1200×630 yang tidak sesuai ukuran file sebenarnya.
-- Favicon lama berukuran 654 KB dan belum memiliki keluarga ikon 48/96/144/180/192/512 yang konsisten.
-- Product schema memuat status stok dan rating yang tidak cukup aman untuk diverifikasi.
-- FAQ schema tidak identik dengan lima FAQ yang tampil di halaman.
-- Beberapa klaim visual terlalu absolut, termasuk “100% aman”, “100% legal”, “Verified Purchase”, dan “98% Repeat Order”.
-- Enam gambar produk dan tiga logo mitra berukuran total sekitar 10,4 MB.
-- URL toko Tokopedia lama merespons HTTP 410.
+- Branding website diperbarui ke Kareppe Crunch pada copy, metadata, manifest, schema, alt text, dan dokumen.
+- Canonical, Open Graph URL, schema URL, robots, dan sitemap memakai domain production baru `https://kareppecrunch.dekatlokal.com/`.
+- Subdomain/host lama diarahkan ke domain baru melalui redirect permanen.
+- Hero memakai gambar WebP berbeda untuk mobile dan desktop/tablet agar perangkat mobile tidak perlu mengambil asset desktop.
+- Katalog memakai tujuh varian baru beserta harga yang tampil di kartu produk.
+- Kalimat dan tautan katalog eksternal lama sudah dihapus.
+- Logo navbar/footer memakai turunan logo baru tanpa background; favicon dan icon PWA dibuat ulang dari logo baru.
 
-## Implementasi
+## SEO Dan Schema
 
-- Title: `Kareppee Crunch | Kerupuk Singkong Premium Gowa Makassar`.
-- Meta description: 149 karakter, natural, mencakup brand, produk, lokasi, dan proposisi nilai.
-- Canonical, Open Graph URL, schema URL, sitemap, dan seluruh image URL schema menggunakan domain production.
-- Robots meta mengizinkan `index, follow` dengan `max-image-preview: large` untuk Googlebot.
-- Open Graph dan Twitter Card memakai `/og-image.jpg` berukuran tepat 1200×630.
-- Hero tetap berupa `next/image`, memiliki alt deskriptif, diprioritaskan sebagai LCP, dan digunakan sebagai `primaryImageOfPage`.
-- Favicon brand dibuat dalam format ICO multi-size dan PNG 48/96/144/180/192/512; manifest memakai ikon yang sama.
-- JSON-LD disatukan dalam satu `@graph`: Organization, LocalBusiness, WebSite, WebPage, ImageObject, BreadcrumbList, ItemList, enam Product, dua OfferCatalog, dan FAQPage.
-- Product schema hanya memakai data yang terlihat dan dapat diverifikasi. Harga serta availability varian tidak dimasukkan karena harga varian belum tampil di kartu produk.
-- Harga Paket Reseller Ekonomi/Standar/Pro tetap dipakai pada OfferCatalog karena harga dan jumlah produk tampil di halaman.
-- FAQ visual dan FAQ schema memakai satu sumber data sehingga pertanyaan dan jawaban selalu identik.
-- Jawaban FAQ tersedia dalam HTML awal dan tetap dapat dibuka/tutup tanpa perubahan visual.
-- Struktur heading diperbaiki secara semantik tanpa mengganti styling.
-- Alt text, `sizes`, lazy loading gambar bawah fold, serta anchor produk diperkuat.
-- Pesan WhatsApp umum, produk, dan reseller memakai format `wa.me`, nomor internasional, serta teks URL-encoded yang menyebut DekatLokal dan Kareppee Crunch.
-- URL Tokopedia yang sudah 410 diganti dengan halaman pencarian Tokopedia sebagai fallback sampai URL Official Store baru tersedia.
-- Klaim absolut yang tidak cukup dapat diverifikasi dinetralkan tanpa menambah atau menghapus section.
-- Total aset berat yang dioptimalkan turun dari 11,02 MB menjadi 0,61 MB (pengurangan sekitar 94,5%).
+- Title: `Kareppe Crunch | Kerupuk Singkong Khas Makassar dari Gowa`.
+- Meta description menonjolkan kerupuk singkong khas Makassar dari Gowa, tekstur renyah ringan, higienitas, dan petani lokal Sulawesi Selatan.
+- Open Graph dan Twitter Card memakai `/og-image.webp` berukuran 1200x630.
+- JSON-LD memakai satu `@graph`: Organization, LocalBusiness, WebSite, WebPage, ImageObject, BreadcrumbList, ItemList, tujuh Product, dua OfferCatalog, dan FAQPage.
+- Product schema memasukkan harga varian, currency `IDR`, availability `InStock`, dan seller Kareppe Crunch karena harga kini tampil di UI.
+- LocalBusiness schema memuat alamat `Perumahan Fakultas Teknik Unhas Gowa, Blok H59`, jam buka Senin-Minggu 08:00-22:00, koordinat Google Maps, `hasMap`, price range, dan founding date Juni 2025.
+- FAQ visual dan FAQ schema memakai satu sumber data sehingga pertanyaan dan jawaban tetap identik.
+- Social/marketplace link memakai Instagram `@kareppecrunch`, TikTok `@kareppecrunch`, Facebook page yang sudah ada, Shopee `kareppecrunch`, fallback pencarian Tokopedia, TikTok Shop via profil TikTok, dan Localoka yang sudah ada.
 
-## File yang diubah
+## Asset Aktif
 
-- Metadata dan schema: `app/layout.tsx`, `app/data/site-content.js`.
-- Crawling/indexing: `app/robots.ts`, `app/sitemap.ts`.
-- Aksesibilitas, heading, CTA, FAQ, dan klaim: seluruh komponen terkait di `app/components/`.
-- Favicon: `app/favicon.ico`, `public/favicon*.png`, `public/icon-*.png`, `public/apple-touch-icon.png`.
-- Social preview: `public/og-image.jpg`.
-- Manifest: `public/site.webmanifest` menggantikan `public/manifest.json`.
-- Performa: enam gambar `public/images/varian/*.jpg` serta logo mitra DekatLokal, Rumah BUMN, dan BRI.
+- Hero: `public/images/hero-desktop-tablet.webp`, `public/images/hero-mobile.webp`.
+- Produk: tujuh file `public/images/varian/*.webp`.
+- Logo: `public/images/logo-kareppe-transparent.webp`.
+- Social preview: `public/og-image.webp`.
+- Partner logo aktif: `public/images/dekat-lokal.webp`, `public/images/rumah-bumn.webp`, `public/images/bank-bri.webp`.
+- Favicon/icon: `app/favicon.ico`, `public/favicon*.png`, `public/icon-*.png`, `public/apple-touch-icon.png`.
+- File sumber JPG/PNG baru tetap disimpan sebagai arsip asset; logo, hero, dan OG lama yang membawa branding lama sudah tidak dipakai.
 
-## Hasil verifikasi lokal production build
+## Hasil Verifikasi Lokal
 
-- `npm run lint`: lulus tanpa error; warning awal kemudian dibersihkan.
-- `npx tsc --noEmit`: lulus.
-- `npm run build`: lulus; homepage, robots, dan sitemap diprerender statis.
-- Homepage build: HTTP 200, satu H1, robots `index, follow`, tanpa `noindex`, `localhost`, `127.0.0.1`, atau `vercel.app`.
-- `robots.txt`, `sitemap.xml`, seluruh favicon, manifest, OG image, hero image, dan dokumen legalitas: HTTP 200 pada server production build lokal.
-- JSON-LD berhasil diparse: 16 node graph, termasuk enam Product dan lima FAQ.
+- `npm run lint`: lulus.
+- `npm run build`: lulus.
+- Server production lokal: homepage, `robots.txt`, `sitemap.xml`, manifest, OG image WebP, hero WebP, dan logo WebP merespons HTTP 200.
+- HTML homepage tidak memuat brand lama atau tautan katalog eksternal lama.
+- JSON-LD berhasil diparse: tujuh Product, seluruh Product memiliki harga `IDR`, LocalBusiness memiliki alamat, jam operasional 08:00-22:00, koordinat Google Maps, `hasMap`, dan canonical domain baru.
+- Pencarian repo hanya menemukan host lama pada aturan redirect legacy yang disengaja.
 
-## Checklist Google Search Console setelah deploy
+## Checklist Google Search Console Setelah Deploy
 
-1. Deploy branch ini ke production dan pastikan deployment terhubung ke `kareppeecrunch.dekatlokal.com`.
-2. Buka homepage, `/robots.txt`, `/sitemap.xml`, `/favicon.ico`, `/favicon-48x48.png`, `/apple-touch-icon.png`, `/icon-192.png`, `/icon-512.png`, `/site.webmanifest`, dan `/og-image.jpg`; semua harus HTTP 200.
+1. Deploy branch ini ke production dan pastikan deployment terhubung ke `kareppecrunch.dekatlokal.com`.
+2. Buka homepage, `/robots.txt`, `/sitemap.xml`, `/favicon.ico`, `/favicon-48x48.png`, `/apple-touch-icon.png`, `/icon-192.png`, `/icon-512.png`, `/site.webmanifest`, dan `/og-image.webp`; semua harus HTTP 200.
 3. View source homepage dan verifikasi title, description, canonical, robots, Open Graph, Twitter Card, favicon links, serta JSON-LD.
-4. Verifikasi Domain Property `dekatlokal.com` melalui DNS agar seluruh subdomain tercakup. URL-prefix `https://kareppeecrunch.dekatlokal.com/` dapat ditambahkan sebagai property operasional tambahan.
-5. Submit `https://kareppeecrunch.dekatlokal.com/sitemap.xml` pada menu Sitemaps.
+4. Verifikasi Domain Property `dekatlokal.com` melalui DNS agar seluruh subdomain tercakup. URL-prefix `https://kareppecrunch.dekatlokal.com/` dapat ditambahkan sebagai property operasional tambahan.
+5. Submit `https://kareppecrunch.dekatlokal.com/sitemap.xml` pada menu Sitemaps.
 6. Inspect homepage, jalankan Live Test, lalu Request Indexing jika hasil live valid.
 7. Bandingkan User-declared canonical dengan Google-selected canonical setelah crawl tersedia.
 8. Uji homepage di Rich Results Test dan Schema Markup Validator; pantau Page Indexing, Enhancements, Product snippets, Merchant listings, Experience, dan Performance.
 9. Pantau favicon dan image indexing setelah recrawl. Favicon sudah eligible, tetapi kemunculannya tetap ditentukan Google.
 10. Setelah data terkumpul, evaluasi query, impressions, CTR, average position, search appearance, dan halaman/image indexing setiap bulan.
 
-## Risiko dan pekerjaan manual
+## Risiko Dan Pekerjaan Manual
 
-- Perubahan kode belum berlaku di production sampai deployment Vercel selesai.
-- Product snippets belum dijamin muncul. Harga varian tidak terlihat di UI, jadi Offer varian sengaja tidak dibuat. Untuk eligibility yang lebih kuat, tampilkan harga konsisten atau buat halaman produk khusus pada pekerjaan UI terpisah.
-- Merchant listings penuh belum dipaksakan karena checkout berlangsung melalui WhatsApp/marketplace dan data stok/pengiriman/retur belum tersedia terstruktur.
-- Ganti fallback pencarian Tokopedia dengan URL Official Store baru setelah tim memperoleh URL yang valid.
-- Konfirmasi token verifikasi Search Console yang ada masih milik property aktif. Domain Property tetap memerlukan akses DNS DekatLokal.
+- Perubahan kode belum berlaku di production sampai deployment selesai.
+- Product snippets dan merchant listings tidak dijamin muncul karena Google tetap menentukan eligibility dari crawl, trust signal, dan kelengkapan data merchant.
+- Ganti fallback pencarian Tokopedia dengan URL Official Store final setelah tersedia.
+- Tambahkan URL LinkedIn resmi ke website/schema jika halaman LinkedIn Kareppe Crunch sudah tersedia.
+- Konfirmasi token verifikasi Search Console masih milik property aktif.
 - Tambahkan link website subdomain ke Google Business Profile dan samakan nama, alamat, serta nomor telepon dengan website.
-- Tambahkan backlink dari direktori Teman Lokal di domain utama dengan anchor: `Kareppee Crunch - Kerupuk Singkong Premium Khas Gowa Makassar`.
-- Google tidak menjamin thumbnail hero atau favicon tampil; implementasi ini membuat aset konsisten, crawlable, dan eligible untuk dipertimbangkan setelah recrawl.
+- Tambahkan backlink dari direktori Teman Lokal di domain utama dengan anchor: `Kareppe Crunch - Kerupuk Singkong Khas Makassar dari Gowa`.

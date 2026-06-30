@@ -39,12 +39,12 @@ export default function Navbar() {
           <a
             href="#home"
             onClick={(e) => handleSmoothScroll(e, '#home')}
-            aria-label="Kareppee Crunch - Kembali ke beranda"
+            aria-label="Kareppe Crunch - Kembali ke beranda"
             className="flex items-center"
           >
             <Image
-              src="/images/logo.png"
-              alt="Logo Kareppee Crunch kerupuk singkong premium khas Gowa Makassar"
+              src="/images/logo-kareppe-transparent.webp"
+              alt="Logo Kareppe Crunch kerupuk singkong khas Makassar"
               width={120}
               height={32}
               className="h-8 w-auto"
@@ -68,7 +68,7 @@ export default function Navbar() {
             {/* Buy Button */}
             <a
               href="#cta"
-              aria-label="Beli produk Kareppee Crunch"
+              aria-label="Beli produk Kareppe Crunch"
               className="flex items-center gap-2 border border-white/60 py-2 px-4 rounded-full text-sm min-h-[48px]"
               onClick={(e) => handleSmoothScroll(e, '#cta')}
             >
@@ -112,7 +112,7 @@ export default function Navbar() {
 
             <a
               href="#cta"
-              aria-label="Beli produk Kareppee Crunch"
+              aria-label="Beli produk Kareppe Crunch"
               className="mt-4 w-full flex items-center justify-center gap-2 border border-white/60 py-2 px-4 rounded-full text-sm min-h-[48px]"
               onClick={(e) => handleSmoothScroll(e, '#cta')}
             >

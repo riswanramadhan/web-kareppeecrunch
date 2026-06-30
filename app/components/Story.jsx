@@ -34,17 +34,17 @@ export default function Story() {
     {
       icon: Users,
       title: 'Dukungan Lokal',
-      description: 'Membeli langsung dari petani lokal untuk mendukung ekonomi masyarakat'
+      description: 'Menyerap hasil panen dari petani singkong Sulawesi Selatan untuk mendukung ekonomi masyarakat'
     },
     {
       icon: Target,
       title: 'Kualitas Terjamin',
-      description: 'Produk premium yang dibuat dengan standar kualitas tinggi'
+      description: 'Produk dibuat bersih, higienis, dan didukung legalitas NIB, SPP-IRT, serta Halal Indonesia'
     }
   ]
 
   return (
-    <section id="about" className="py-20 bg-white" aria-label="Tentang Kareppee Crunch">
+    <section id="about" className="py-20 bg-white" aria-label="Tentang Kareppe Crunch">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimateOnScroll variant="fadeUp">
@@ -54,16 +54,16 @@ export default function Story() {
             </div>
             
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Tentang <span className="text-orange-600">Kareppee Crunch</span>
+              Tentang <span className="text-orange-600">Kareppe Crunch</span>
             </h2>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Kareppee Crunch adalah produsen kerupuk singkong asli Gowa dengan kualitas premium
+              Kareppe Crunch adalah produsen kerupuk singkong khas Makassar dari Gowa dengan kualitas modern
             </p>
 
             {/* Business Type */}
             <div className="inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-full mt-6">
-              <span className="text-lg font-semibold">Kerupuk Singkong</span>
+              <span className="text-lg font-semibold">Kerupuk Singkong Khas Makassar</span>
             </div>
           </div>
         </AnimateOnScroll>
@@ -80,18 +80,16 @@ export default function Story() {
                 
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
-                    Kareppee Crunch adalah produsen kerupuk singkong asal Gowa yang 
-                    memproduksi camilan tradisional dengan kualitas modern.
+                    Kareppe Crunch adalah produsen olahan singkong asal Gowa yang 
+                    mempertahankan teknik pengolahan asli khas Makassar untuk menghadirkan camilan tradisional berkualitas modern.
                   </p>
                   
                   <p>
-                    Kami menggunakan bahan baku singkong pilihan dari petani lokal 
-                    dan mengolahnya dengan teknik autentik khas Makassar.
+                    Kami memberdayakan petani singkong di wilayah Sulawesi Selatan sebagai pemasok utama bahan baku.
                   </p>
                   
                   <p>
-                    Setiap produk dibuat dengan standar kualitas tinggi untuk 
-                    memastikan kepuasan pelanggan.
+                    Setiap produk diproses secara bersih dan higienis dengan tekstur kriuk ringan yang tidak keras.
                   </p>
                 </div>
               </div>

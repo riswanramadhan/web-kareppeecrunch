@@ -16,7 +16,7 @@ export default function CTA() {
   }
 
   const handleContactMinka = () => {
-    const message = 'Halo Kak, saya dapat info dari website DekatLokal Kareppee Crunch. Saya ingin bertanya tentang produk dan pemesanan.'
+    const message = 'Halo Kak, saya dapat info dari website DekatLokal Kareppe Crunch. Saya ingin bertanya tentang produk dan pemesanan.'
     const whatsappUrl = `https://wa.me/62882019886782?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
@@ -24,17 +24,17 @@ export default function CTA() {
   const marketplaceLinks = [
     {
       name: 'Shopee',
-      url: 'https://shopee.co.id/kareppeecrunch',
+      url: 'https://shopee.co.id/kareppecrunch',
       color: 'bg-orange-500 hover:bg-orange-600'
     },
     {
       name: 'Tokopedia',
-      url: 'https://www.tokopedia.com/search?st=product&q=kareppee%20crunch',
+      url: 'https://www.tokopedia.com/search?st=product&q=kareppe%20crunch',
       color: 'bg-green-500 hover:bg-green-600'
     },
     {
       name: 'TikTok Shop',
-      url: 'https://www.tiktok.com/@kareppeecrunch',
+      url: 'https://www.tiktok.com/@kareppecrunch',
       color: 'bg-black hover:bg-gray-800'
     },
     {
@@ -44,11 +44,11 @@ export default function CTA() {
     }
   ]
   return (
-    <section id="cta" className="py-12 md:py-16 bg-orange-600" aria-label="Beli Kareppee Crunch sekarang">
+    <section id="cta" className="py-12 md:py-16 bg-orange-600" aria-label="Beli Kareppe Crunch sekarang">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <AnimateOnScroll>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 md:mb-4">
-            Yuk, Coba <span className="text-orange-100">Kareppee Crunch</span> Sekarang!
+            Yuk, Coba <span className="text-orange-100">Kareppe Crunch</span> Sekarang!
           </h2>
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.1}>
@@ -61,7 +61,7 @@ export default function CTA() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-6 md:mb-8">
             <button 
               onClick={handleBuyNow}
-              aria-label="Beli Kareppee Crunch sekarang"
+              aria-label="Beli Kareppe Crunch sekarang"
               className="min-h-[48px] bg-white text-orange-600 hover:bg-orange-50 font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg transition-colors duration-200 flex items-center justify-center text-sm md:text-base"
             >
               <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 mr-2" aria-hidden="true" />
@@ -101,7 +101,7 @@ export default function CTA() {
           <div
             role="dialog"
             aria-modal="true"
-            aria-label="Pilih marketplace untuk membeli Kareppee Crunch"
+            aria-label="Pilih marketplace untuk membeli Kareppe Crunch"
             className="bg-white rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in duration-200"
           >
             {/* Header */}
@@ -120,7 +120,7 @@ export default function CTA() {
 
             {/* Description */}
             <p className="text-gray-600 mb-6 text-center">
-              Beli Kareppee Crunch di marketplace favorit Anda
+              Beli Kareppe Crunch di marketplace favorit Anda
             </p>
 
             {/* Marketplace Options */}
@@ -142,7 +142,7 @@ export default function CTA() {
             {/* Footer */}
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-500">
-                Dibuka di tab baru • Klik X untuk menutup
+                Dibuka di tab baru - Klik X untuk menutup
               </p>
             </div>
           </div>

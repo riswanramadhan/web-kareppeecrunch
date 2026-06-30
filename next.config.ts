@@ -14,13 +14,19 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         has: [{ type: "host", value: "kareppeecrunch.com" }],
-        destination: "https://kareppeecrunch.dekatlokal.com/:path*",
+        destination: "https://kareppecrunch.dekatlokal.com/:path*",
         permanent: true,
       },
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.kareppeecrunch.com" }],
-        destination: "https://kareppeecrunch.dekatlokal.com/:path*",
+        destination: "https://kareppecrunch.dekatlokal.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "kareppeecrunch.dekatlokal.com" }],
+        destination: "https://kareppecrunch.dekatlokal.com/:path*",
         permanent: true,
       },
     ];

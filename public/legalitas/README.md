@@ -1,6 +1,6 @@
 # Legalitas Documents
 
-Folder ini berisi dokumen legalitas Kareppee Crunch:
+Folder ini berisi dokumen legalitas Kareppe Crunch:
 
 1. **sertifikathalal.pdf** - Sertifikat Halal Indonesia
 2. **perizinanberusahaberbasisrisiko.pdf** - Perizinan Berusaha Berbasis Risiko

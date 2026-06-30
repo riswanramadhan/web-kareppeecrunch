@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { ChevronDown } from 'lucide-react'
 import { motion } from 'framer-motion'
 
@@ -18,18 +17,21 @@ export default function Hero() {
   return (
     <section
       id="home"
-      aria-label="Hero section Kareppee Crunch"
+      aria-label="Hero section Kareppe Crunch"
       className="relative h-screen w-full overflow-hidden bg-black"
     >
-      <Image
-        src="/images/hero.jpeg"
-        alt="Kareppee Crunch kerupuk singkong premium khas Gowa Makassar"
-        fill
-        priority
-        quality={80}
-        sizes="100vw"
-        className="object-cover brightness-[1.12] contrast-[1.08] saturate-[1.06]"
-      />
+      <picture className="absolute inset-0 block">
+        <source media="(max-width: 767px)" srcSet="/images/hero-mobile.webp" />
+        <source media="(min-width: 768px)" srcSet="/images/hero-desktop-tablet.webp" />
+        <img
+          src="/images/hero-desktop-tablet.webp"
+          alt="Kareppe Crunch kerupuk singkong khas Makassar dari Gowa"
+          width="1536"
+          height="1024"
+          fetchPriority="high"
+          className="h-full w-full object-cover brightness-[1.12] contrast-[1.08] saturate-[1.06]"
+        />
+      </picture>
 
       <div
         className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/65 to-transparent"
@@ -44,7 +46,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            Kareppee Crunch
+            Kareppe Crunch
           </motion.h1>
 
           <motion.div
@@ -54,7 +56,7 @@ export default function Hero() {
           >
             <button
               onClick={handleDiscoverClick}
-              aria-label="Jelajahi produk Kareppee Crunch"
+              aria-label="Jelajahi produk Kareppe Crunch"
               className="mt-5 inline-block text-xs uppercase tracking-widest border border-white/70 px-6 py-2 rounded-full hover:bg-white hover:text-black transition cursor-pointer min-h-[48px] min-w-[48px]"
             >
               Discover

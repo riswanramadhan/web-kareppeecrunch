@@ -10,15 +10,15 @@ export default function Reviews() {
       name: 'Bahrul Rannu',
       avatar: 'BR',
       rating: 5,
-      product: 'Kareppee Hotlado & Coklat',
-      review: 'Saya suka keduanya varian hotlado & coklat. Yang rasa hotlado enak banget pokoknya mantul dan wajib order lagi sih😋😁'
+      product: 'Kareppe Pedas Balado & Cokelat Premium',
+      review: 'Saya suka keduanya varian pedas balado & cokelat premium. Yang rasa pedas balado enak banget pokoknya mantul dan wajib order lagi sih.'
     },
     {
       id: 2,
       name: 'Sharifah Ulya',
       avatar: 'SU',
       rating: 5,
-      product: 'Kareppee Green Matcha',
+      product: 'Kareppe Teh Hijau Matcha',
       review: 'Udah cobain, enak recommended, harganya juga murah. Teksturnya renyah, beda dengan kerupuk singkong lain, yang ini lebih gurih dan tidak keras.'
     },
     {
@@ -26,7 +26,7 @@ export default function Reviews() {
       name: 'Rijal Ucil',
       avatar: 'RU',
       rating: 5,
-      product: 'Kareppee Pedas Daun Jeruk',
+      product: 'Kareppe Pedas Daun Jeruk',
       review: 'Barang datang dengan cepat, aman dan rasanya enakk banget jadi ketagihan, thank you so much!'
     },
     {
@@ -34,8 +34,8 @@ export default function Reviews() {
       name: 'Farsya Arrayyan',
       avatar: 'FA',
       rating: 5,
-      product: 'Kareppee Hotlado',
-      review: 'Enak poooolll, ga nyangka si rasanya, baru nyobain Kareppee pertama kali😋 Cocok di lidahku.'
+      product: 'Kareppe Pedas Balado',
+      review: 'Enak poooolll, ga nyangka si rasanya, baru nyobain Kareppe pertama kali. Cocok di lidahku.'
     }
   ]
 
@@ -60,7 +60,7 @@ export default function Reviews() {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Testimoni dari pelanggan setia Kareppee Crunch yang telah merasakan kelezatan kerupuk singkong premium kami
+            Testimoni dari pelanggan setia Kareppe Crunch yang telah merasakan kelezatan kerupuk singkong premium kami
           </p>
         </AnimateOnScroll>
 
@@ -141,7 +141,7 @@ export default function Reviews() {
                   <div className="text-orange-100">Rating Rata-rata</div>
                 </div>
                 <div className="group">
-                  <div className="text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-500 ease-out">6</div>
+                  <div className="text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-500 ease-out">7</div>
                   <div className="text-orange-100">Varian Rasa</div>
                 </div>
               </div>

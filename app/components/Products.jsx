@@ -7,17 +7,17 @@ import { products } from '../data/site-content'
 
 export default function Products() {
   const handleOrder = (productName) => {
-    const message = `Halo Kak, saya dapat info dari website DekatLokal Kareppee Crunch. Saya ingin pesan kerupuk singkong varian ${productName}.`
+    const message = `Halo Kak, saya dapat info dari website DekatLokal Kareppe Crunch. Saya ingin pesan kerupuk singkong varian ${productName}.`
     const whatsappUrl = `https://wa.me/62882019886782?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 
   return (
-    <section id="products" className="py-16 bg-white" aria-label="Katalog produk Kareppee Crunch">
+    <section id="products" className="py-16 bg-white" aria-label="Katalog produk Kareppe Crunch">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
-            Varian <span className="text-orange-600">Kareppee Crunch</span>
+            Varian <span className="text-orange-600">Kareppe Crunch</span>
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl md:max-w-3xl mx-auto">
             Pilih rasa favorit Anda dari berbagai varian lezat
@@ -51,7 +51,7 @@ export default function Products() {
               <div className="relative aspect-square overflow-hidden">
                 <Image 
                   src={product.image}
-                  alt={`Kerupuk singkong Kareppee Crunch varian ${product.name}`}
+                  alt={`Kerupuk singkong Kareppe Crunch varian ${product.name}`}
                   width={400}
                   height={400}
                   loading="lazy"
@@ -69,6 +69,9 @@ export default function Products() {
                 <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">
                   {product.description}
                 </p>
+                <p className="text-base md:text-lg font-bold text-orange-600 mb-3 md:mb-4">
+                  {product.price}
+                </p>
 
                 {/* Order Now Button */}
                 <button 
@@ -83,22 +86,6 @@ export default function Products() {
             </StaggerItem>
           ))}
         </StaggerContainer>
-
-        {/* View All Products Section */}
-        <div className="text-center">
-          <p className="text-sm text-gray-500 font-light">
-            Katalog lengkap tersedia di{' '}
-            <a 
-              href="https://drive.google.com/drive/folders/1we-JKgjZGsFZ_qSZYO7Fnb2wV1kgQUsi"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Lihat katalog lengkap Kareppee Crunch di Google Drive"
-              className="text-orange-600 hover:text-orange-700 underline transition-colors duration-200"
-            >
-              Google Drive
-            </a>
-          </p>
-        </div>
       </div>
     </section>
   )

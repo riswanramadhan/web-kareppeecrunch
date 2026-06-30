@@ -44,14 +44,14 @@ export default function Features() {
   ]
 
   return (
-    <section id="features" className="py-16 bg-gray-50" aria-label="Nilai unggulan Kareppee Crunch">
+    <section id="features" className="py-16 bg-gray-50" aria-label="Nilai unggulan Kareppe Crunch">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Nilai <span className="text-orange-600">Unggulan</span> Kami
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Keunggulan yang membuat Kareppee Crunch berbeda dan terpercaya
+            Keunggulan yang membuat Kareppe Crunch berbeda dan terpercaya
           </p>
         </AnimateOnScroll>
 

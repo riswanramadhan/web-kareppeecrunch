@@ -13,7 +13,7 @@ export default function PusatBantuan() {
   }
 
   return (
-    <section id="pusat-bantuan" className="py-20 bg-gradient-to-br from-orange-50 via-white to-orange-50" aria-label="Pusat bantuan dan FAQ Kareppee Crunch">
+    <section id="pusat-bantuan" className="py-20 bg-gradient-to-br from-orange-50 via-white to-orange-50" aria-label="Pusat bantuan dan FAQ Kareppe Crunch">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

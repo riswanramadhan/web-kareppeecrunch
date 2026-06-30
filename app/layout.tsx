@@ -9,19 +9,20 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const SITE_URL = "https://kareppeecrunch.dekatlokal.com";
+const SITE_URL = "https://kareppecrunch.dekatlokal.com";
 const CANONICAL_URL = `${SITE_URL}/`;
 const SITE_TITLE =
-  "Kareppee Crunch | Kerupuk Singkong Premium Gowa Makassar";
+  "Kareppe Crunch | Kerupuk Singkong Khas Makassar dari Gowa";
 const OG_TITLE =
-  "Kareppee Crunch | Kerupuk Singkong Premium Khas Gowa Makassar";
+  "Kareppe Crunch | Kerupuk Singkong Khas Makassar dari Gowa";
 const SITE_DESCRIPTION =
-  "Kareppee Crunch menjual kerupuk singkong premium khas Gowa Makassar: renyah, ringan, higienis, dengan varian rasa modern untuk camilan dan oleh-oleh.";
+  "Kareppe Crunch adalah produsen kerupuk singkong khas Makassar dari Gowa yang renyah, ringan, higienis, dan dibuat dari singkong pilihan petani lokal Sulawesi Selatan.";
 const OG_DESCRIPTION =
-  "Kerupuk singkong premium Kareppee Crunch dengan tekstur renyah, ringan, dan varian rasa modern khas Gowa Makassar.";
-const HERO_IMAGE_URL = `${SITE_URL}/images/hero.jpeg`;
-const SOCIAL_IMAGE_URL = `${SITE_URL}/og-image.jpg`;
-const LOGO_URL = `${SITE_URL}/images/logo.png`;
+  "Kerupuk singkong Kareppe Crunch dengan tekstur kriuk ringan, teknik autentik khas Makassar, dan tujuh varian rasa modern.";
+const HERO_IMAGE_URL = `${SITE_URL}/images/hero-desktop-tablet.webp`;
+const SOCIAL_IMAGE_URL = `${SITE_URL}/og-image.webp`;
+const LOGO_URL = `${SITE_URL}/images/logo-kareppe-transparent.webp`;
+const MAP_URL = "https://maps.google.com/?q=-5.236420,119.499588";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -33,12 +34,13 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  applicationName: "Kareppee Crunch",
+  applicationName: "Kareppe Crunch",
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   category: "Makanan dan minuman",
   keywords: [
-    "Kareppee Crunch",
+    "Kareppe Crunch",
+    "kareppecrunch",
     "kerupuk singkong premium",
     "kerupuk singkong Gowa",
     "kerupuk singkong Makassar",
@@ -48,9 +50,9 @@ export const metadata: Metadata = {
     "reseller kerupuk singkong",
     "UMKM makanan ringan Sulawesi Selatan",
   ],
-  authors: [{ name: "Kareppee Crunch", url: CANONICAL_URL }],
-  creator: "Kareppee Crunch",
-  publisher: "Kareppee Crunch",
+  authors: [{ name: "Kareppe Crunch", url: CANONICAL_URL }],
+  creator: "Kareppe Crunch",
+  publisher: "Kareppe Crunch",
   formatDetection: {
     address: false,
     email: false,
@@ -70,7 +72,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    siteName: "Kareppee Crunch - DekatLokal",
+    siteName: "Kareppe Crunch - DekatLokal",
     title: OG_TITLE,
     description: OG_DESCRIPTION,
     images: [
@@ -79,8 +81,8 @@ export const metadata: Metadata = {
         secureUrl: SOCIAL_IMAGE_URL,
         width: 1200,
         height: 630,
-        type: "image/jpeg",
-        alt: "Kareppee Crunch kerupuk singkong premium khas Gowa Makassar dari singkong pilihan petani lokal",
+        type: "image/webp",
+        alt: "Kareppe Crunch kerupuk singkong khas Makassar dari singkong pilihan petani lokal",
       },
     ],
   },
@@ -88,11 +90,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: OG_TITLE,
     description:
-      "Camilan kerupuk singkong premium khas Gowa Makassar dengan varian Original, Hotlado, Jagung Bakar, Matcha, dan Cokelat.",
+      "Camilan kerupuk singkong khas Makassar dengan varian Klasik, Pedas Balado, Pedas Daun Jeruk, Cokelat Premium, Matcha, Jagung Bakar, dan Gula Aren.",
     images: [
       {
         url: SOCIAL_IMAGE_URL,
-        alt: "Kareppee Crunch kerupuk singkong premium khas Gowa Makassar dari singkong pilihan petani lokal",
+        alt: "Kareppe Crunch kerupuk singkong khas Makassar dari singkong pilihan petani lokal",
       },
     ],
   },
@@ -118,7 +120,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   appleWebApp: {
     capable: true,
-    title: "Kareppee Crunch",
+    title: "Kareppe Crunch",
     statusBarStyle: "default",
   },
   verification: {
@@ -136,16 +138,24 @@ const primaryImageId = `${CANONICAL_URL}#primaryimage`;
 const productNodes = products.map((product) => ({
   "@type": "Product",
   "@id": `${CANONICAL_URL}#product-${product.slug}`,
-  name: `Kerupuk Singkong Kareppee Crunch ${product.name}`,
+  name: `Kerupuk Singkong Kareppe Crunch ${product.name}`,
   description: product.description,
   image: `${SITE_URL}${product.image}`,
   url: `${CANONICAL_URL}#produk-${product.slug}`,
   category: "Kerupuk singkong",
   brand: {
     "@type": "Brand",
-    name: "Kareppee Crunch",
+    name: "Kareppe Crunch",
   },
   manufacturer: { "@id": organizationId },
+  offers: {
+    "@type": "Offer",
+    url: `${CANONICAL_URL}#produk-${product.slug}`,
+    priceCurrency: "IDR",
+    price: product.priceValue,
+    availability: "https://schema.org/InStock",
+    seller: { "@id": organizationId },
+  },
 }));
 
 const structuredData = {
@@ -154,16 +164,17 @@ const structuredData = {
     {
       "@type": "Organization",
       "@id": organizationId,
-      name: "Kareppee Crunch",
+      name: "Kareppe Crunch",
       url: CANONICAL_URL,
       logo: {
         "@type": "ImageObject",
         url: LOGO_URL,
-        width: 1080,
-        height: 446,
+        width: 900,
+        height: 381,
       },
       image: { "@id": primaryImageId },
       description: SITE_DESCRIPTION,
+      foundingDate: "2025-06",
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+62882019886782",
@@ -172,21 +183,30 @@ const structuredData = {
         areaServed: "ID",
       },
       sameAs: [
-        "https://www.instagram.com/kareppeecrunch/",
+        "https://www.instagram.com/kareppecrunch/",
         "https://www.facebook.com/61583619765023/",
-        "https://www.tiktok.com/@kareppeecrunch",
+        "https://www.tiktok.com/@kareppecrunch",
+        "https://shopee.co.id/kareppecrunch",
       ],
     },
     {
       "@type": "LocalBusiness",
       "@id": localBusinessId,
-      name: "Kareppee Crunch",
+      name: "Kareppe Crunch",
       url: CANONICAL_URL,
       description:
-        "Kareppee Crunch adalah produsen kerupuk singkong premium khas Gowa dan Makassar dengan varian rasa modern dan tekstur renyah.",
+        "Kareppe Crunch adalah produsen olahan singkong asal Gowa yang mempertahankan teknik pengolahan asli khas Makassar untuk menghadirkan camilan tradisional berkualitas modern.",
       image: [SOCIAL_IMAGE_URL, HERO_IMAGE_URL],
       logo: LOGO_URL,
       telephone: "+62882019886782",
+      priceRange: "Rp13.500-Rp14.500",
+      foundingDate: "2025-06",
+      hasMap: MAP_URL,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -5.23642,
+        longitude: 119.499588,
+      },
       address: {
         "@type": "PostalAddress",
         streetAddress: "Perumahan Fakultas Teknik Unhas Gowa, Blok H59",
@@ -216,17 +236,18 @@ const structuredData = {
       },
       parentOrganization: { "@id": organizationId },
       sameAs: [
-        "https://www.instagram.com/kareppeecrunch/",
+        "https://www.instagram.com/kareppecrunch/",
         "https://www.facebook.com/61583619765023/",
-        "https://www.tiktok.com/@kareppeecrunch",
+        "https://www.tiktok.com/@kareppecrunch",
+        "https://shopee.co.id/kareppecrunch",
       ],
     },
     {
       "@type": "WebSite",
       "@id": websiteId,
-      name: "Kareppee Crunch",
+      name: "Kareppe Crunch",
       alternateName:
-        "Kareppee Crunch Kerupuk Singkong Premium Gowa Makassar",
+        "Kareppe Crunch Kerupuk Singkong Khas Makassar dari Gowa",
       url: CANONICAL_URL,
       publisher: { "@id": organizationId },
       inLanguage: "id-ID",
@@ -236,10 +257,10 @@ const structuredData = {
       "@id": primaryImageId,
       url: HERO_IMAGE_URL,
       contentUrl: HERO_IMAGE_URL,
-      width: 777,
-      height: 1165,
+      width: 1536,
+      height: 1024,
       caption:
-        "Kareppee Crunch kerupuk singkong premium khas Gowa Makassar dengan singkong pilihan dari petani lokal",
+        "Kareppe Crunch kerupuk singkong khas Makassar dengan singkong pilihan dari petani lokal",
     },
     {
       "@type": "WebPage",
@@ -247,7 +268,7 @@ const structuredData = {
       name: OG_TITLE,
       url: CANONICAL_URL,
       description:
-        "Kerupuk singkong premium khas Gowa Makassar dengan tekstur renyah, ringan, dan varian rasa modern.",
+        "Kerupuk singkong khas Makassar dengan tekstur renyah, ringan, dan varian rasa modern.",
       isPartOf: { "@id": websiteId },
       about: { "@id": localBusinessId },
       primaryImageOfPage: { "@id": primaryImageId },
@@ -269,7 +290,7 @@ const structuredData = {
     {
       "@type": "ItemList",
       "@id": `${CANONICAL_URL}#product-list`,
-      name: "Varian Kerupuk Singkong Kareppee Crunch",
+      name: "Varian Kerupuk Singkong Kareppe Crunch",
       numberOfItems: products.length,
       itemListElement: products.map((product, index) => ({
         "@type": "ListItem",
@@ -281,7 +302,7 @@ const structuredData = {
     {
       "@type": "OfferCatalog",
       "@id": `${CANONICAL_URL}#variant-catalog`,
-      name: "Katalog Varian Kerupuk Singkong Kareppee Crunch",
+      name: "Katalog Varian Kerupuk Singkong Kareppe Crunch",
       itemListElement: products.map((product, index) => ({
         "@type": "ListItem",
         position: index + 1,
@@ -291,7 +312,7 @@ const structuredData = {
     {
       "@type": "OfferCatalog",
       "@id": `${CANONICAL_URL}#reseller-catalog`,
-      name: "Paket Reseller Kareppee Crunch",
+      name: "Paket Reseller Kareppe Crunch",
       itemListElement: resellerPackages.map((resellerPackage) => ({
         "@type": "Offer",
         url: `${CANONICAL_URL}#peluang-kemitraan`,
@@ -300,7 +321,7 @@ const structuredData = {
         seller: { "@id": organizationId },
         itemOffered: {
           "@type": "Service",
-          name: `Reseller Kareppee Crunch ${resellerPackage.name}`,
+          name: `Reseller Kareppe Crunch ${resellerPackage.name}`,
           description: `${resellerPackage.items}. ${resellerPackage.description}.`,
         },
       })),
@@ -334,7 +355,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
         <script
-          id="kareppee-structured-data"
+          id="kareppe-structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),

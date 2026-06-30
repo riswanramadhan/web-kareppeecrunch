@@ -1,46 +1,41 @@
 # Images Folder
 
-Folder ini untuk menyimpan gambar-gambar yang digunakan dalam website Kareppe Crunch.
+Folder ini menyimpan gambar yang digunakan dalam website Kareppe Crunch.
 
-## Cara Menggunakan Background Hero Section
+## Hero
 
-Untuk mengganti background hero section dengan foto dari UMKM:
+Hero memakai dua asset aktif:
 
-1. **Letakkan foto** di folder ini (misal: `hero-bg.jpg`)
-2. **Edit file** `app/components/Hero.jsx`
-3. **Ganti baris 12-14** dengan:
-   ```jsx
-   <img 
-     src="/images/hero-bg.jpg" 
-     alt="Kareppe Crunch Potato Field" 
-     className="w-full h-full object-cover" 
-   />
-   ```
+- `hero-desktop-tablet.webp` untuk desktop dan tablet.
+- `hero-mobile.webp` untuk mobile.
 
-## Rekomendasi Foto Background
+File sumber upload tetap disimpan:
 
-- **Format**: JPG, PNG, atau WebP
-- **Ukuran**: Minimal 1920x1080px (Full HD)
-- **Rasio**: 16:9 landscape
-- **Kualitas**: High resolution, tidak blur
-- **Isi Foto**: Ladang ubi, kebun, atau pemandangan alam yang relevan
+- `hero-desktop-tablet.png`
+- `hero-mobile.jpg`
 
-## Struktur Folder
+## Logo
 
-```
-public/images/
-├── hero-bg.jpg          # Background hero section
-├── products/            # Foto produk
-│   ├── original.jpg
-│   ├── pedas.jpg
-│   └── keju.jpg
-└── about/               # Foto tentang kami
-    ├── team.jpg
-    └── factory.jpg
-```
+- `logo-kareppe-transparent.webp` dipakai untuk navbar dan footer.
+- `logo-kareppe-transparent.png` disimpan sebagai turunan transparan lossless.
+- `../logo-new.jpg` adalah sumber logo baru.
+
+## Varian Produk
+
+Asset aktif varian produk memakai WebP:
+
+- `varian/klasik.webp`
+- `varian/baladopedas.webp`
+- `varian/pedasdaunjeruk.webp`
+- `varian/cokelatpremium.webp`
+- `varian/teshijaumatcha.webp`
+- `varian/jagungbakar.webp`
+- `varian/gulaaren.webp`
+
+File JPG sumber tetap disimpan sebagai arsip asset.
 
 ## Optimasi Gambar
 
-- Gunakan format WebP untuk ukuran lebih kecil
-- Kompres gambar dengan tools seperti TinyPNG
-- Pastikan gambar tidak terlalu besar (< 500KB)
+- Gunakan WebP untuk asset aktif website.
+- Simpan file sumber JPG/PNG agar mudah diregenerasi.
+- Pastikan gambar hero, produk, dan favicon tidak blur pada ukuran tampilnya.

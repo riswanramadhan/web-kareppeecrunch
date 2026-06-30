@@ -14,7 +14,7 @@ export default function Legalitas() {
       description: 'Dokumen Sertifikat Halal Indonesia',
       file: '/legalitas/sertifikathalal.pdf',
       color: 'bg-green-500',
-      preview: 'Dokumen Sertifikat Halal Indonesia untuk produk Kareppee Crunch yang tersedia untuk ditinjau'
+      preview: 'Dokumen Sertifikat Halal Indonesia untuk produk Kareppe Crunch yang tersedia untuk ditinjau'
     },
     {
       icon: FileCheck,
@@ -39,7 +39,7 @@ export default function Legalitas() {
   }
 
   return (
-    <section id="legalitas" className="py-12 bg-gray-50" aria-label="Legalitas dan sertifikasi Kareppee Crunch">
+    <section id="legalitas" className="py-12 bg-gray-50" aria-label="Legalitas dan sertifikasi Kareppe Crunch">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimateOnScroll className="text-center mb-10">
@@ -52,7 +52,7 @@ export default function Legalitas() {
           </h2>
           
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            Dokumen legalitas Kareppee Crunch yang tersedia untuk ditinjau pelanggan
+            Dokumen legalitas Kareppe Crunch yang tersedia untuk ditinjau pelanggan
           </p>
         </AnimateOnScroll>
 

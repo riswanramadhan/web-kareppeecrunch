@@ -6,7 +6,7 @@ import { resellerPackages as packages } from '../data/site-content'
 
 export default function PeluangKemitraan() {
   const handleWhatsAppOrder = (packageName) => {
-    const message = `Halo Kak, saya dapat info dari website DekatLokal Kareppee Crunch. Saya tertarik dengan peluang reseller Kareppee Crunch Paket ${packageName}.`
+    const message = `Halo Kak, saya dapat info dari website DekatLokal Kareppe Crunch. Saya tertarik dengan peluang reseller Kareppe Crunch Paket ${packageName}.`
     const whatsappUrl = `https://wa.me/62882019886782?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
@@ -57,7 +57,7 @@ export default function PeluangKemitraan() {
   ]
 
   return (
-    <section id="peluang-kemitraan" className="py-20 bg-gradient-to-br from-gray-50 to-orange-50" aria-label="Peluang reseller Kareppee Crunch">
+    <section id="peluang-kemitraan" className="py-20 bg-gradient-to-br from-gray-50 to-orange-50" aria-label="Peluang reseller Kareppe Crunch">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimateOnScroll className="text-center mb-16">
@@ -70,7 +70,7 @@ export default function PeluangKemitraan() {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Bergabung dengan ekosistem bisnis Kareppee Crunch dan raih kesuksesan finansial Anda
+            Bergabung dengan ekosistem bisnis Kareppe Crunch dan raih kesuksesan finansial Anda
           </p>
         </AnimateOnScroll>
 
@@ -126,7 +126,7 @@ export default function PeluangKemitraan() {
                   </p>
                   <button 
                     onClick={() => handleWhatsAppOrder(pkg.name.replace('Paket ', ''))}
-                    aria-label={`Pesan ${pkg.name} reseller Kareppee Crunch melalui WhatsApp`}
+                    aria-label={`Pesan ${pkg.name} reseller Kareppe Crunch melalui WhatsApp`}
                     className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center"
                   >
                     <MessageCircle className="w-4 h-4 mr-2" aria-hidden="true" />

@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://kareppeecrunch.dekatlokal.com/sitemap.xml",
+    sitemap: "https://kareppecrunch.dekatlokal.com/sitemap.xml",
   };
 }
