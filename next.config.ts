@@ -3,8 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Hemat kuota Vercel Image Optimization: cache hasil optimasi 31 hari
+    // (default Next 16 hanya 4 jam) dan 7 ukuran saja di srcset (sebelumnya 14).
+    minimumCacheTTL: 2678400,
+    deviceSizes: [640, 828, 1200, 1920],
+    imageSizes: [128, 256, 384],
   },
   compress: true,
   poweredByHeader: false,
